@@ -330,3 +330,18 @@ a { color: inherit; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
   .reveal { opacity: 1; transform: none; }
 }
+
+/* ---------- dark overlay on photos ----------
+   --image-overlay: 0 = no overlay, 0.15 = slight, 0.3 = moody, 0.5 = very dark
+   (the actual amount is set in config.js → theme → imageOverlay) */
+:root { --image-overlay: 0.15; }
+
+.frame img,
+.gallery__grid img {
+  filter: brightness(calc(1 - var(--image-overlay)));
+}
+
+/* gallery photos lighten up slightly when hovered (on computers) */
+.gallery__grid figure:hover img {
+  filter: brightness(calc(1 - var(--image-overlay) / 2));
+}
