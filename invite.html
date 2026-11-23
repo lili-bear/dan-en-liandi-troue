@@ -63,16 +63,16 @@
 
   const couple = `${C.couple.partner1} ${C.couple.joiner} ${C.couple.partner2}`;
   $("m-msg").value =
-`Dierbare {name} 🌹
+`Liewe {name} 🌹
 
-${C.words.intro}
-
-${couple} — ${C.dateText}
-
-Ons het met liefde {seatsText} vir {jou} gereserveer. Omdat ons viering klein en intiem is, vra ons vriendelik dat slegs die gaste wat hier genoem word, bywoon.
+Ons is so opgewonder om {jou} na ons troue te nooi om ons spesiale dag saam met ons te fier! Ons hoop on {jou} daar te sien, en kan nie wag nie!
 
 Sien al die besonderhede en RSVP hier:
-{link}`;
+{link}
+    
+Met baie liefde
+Dan & Liandi'
+; // ${couple} — ${C.dateText}
 
   const base = (C.siteUrl || (location.origin + location.pathname.replace(/invite\.html$/, ""))).replace(/\/?$/, "/");
   let finalMsg = "", link = "";
