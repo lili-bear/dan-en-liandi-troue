@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="af">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Uitnodigingskakel-maker</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body { background: var(--black); color: var(--text-light); }
+    .wrap { max-width: 640px; margin: 0 auto; padding: 50px 20px 80px; }
+    textarea { width: 100%; min-height: 150px; padding: 12px; font: inherit; font-size: 17px; color: var(--text-light); background: var(--black); border: 1px solid rgba(185,186,192,.4); border-radius: 4px; }
+    .out { margin-top: 26px; padding: 18px; background: var(--black-soft); border: 1px solid rgba(185,186,192,.3); border-radius: 4px; word-break: break-all; }
+    .out code { color: var(--silver-lt); font-size: 15px; }
+    .row { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 14px; }
+    .row .btn { flex: 1 1 200px; font-size: 13px; padding: 13px 16px; }
+    .hint { font-size: .9em; opacity: .75; }
+    .copied { color: #9fd3ae; min-height: 1.2em; }
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <h1 class="heading heading--light" style="text-align:center">Uitnodigingskakel-maker</h1>
+  <p class="hint" style="text-align:center">Net vir jou — skep 'n persoonlike skakel vir elke huishouding. Die webwerf groet hulle op hul naam en wys hoeveel plekke vir hulle gereserveer is.</p>
+
+  <form id="maker" class="rsvp__form" style="max-width:none;margin-top:24px">
+    <label class="field"><span>Naam/name op die uitnodiging</span>
+      <input id="m-name" type="text" placeholder="bv. Pieter & Anri" required></label>
+    <label class="field"><span>Plekke gereserveer</span>
+      <select id="m-seats"></select></label>
+    <label class="field"><span>Hul WhatsApp-nommer (opsioneel)</span>
+      <input id="m-phone" type="tel" placeholder="bv. 082 123 4567"></label>
+    <label class="field"><span>Uitnodigingsboodskap (verander gerus)</span>
+      <textarea id="m-msg"></textarea></label>
+    <button class="btn" type="submit" style="width:100%">Skep skakel</button>
+  </form>
+
+  <div class="out" id="out" hidden>
+    <p class="hint" style="margin-top:0">Persoonlike skakel:</p>
+    <code id="m-link"></code>
+    <div class="row">
+      <button class="btn btn--ghost" id="copy-link" type="button">Kopieer skakel</button>
+      <button class="btn btn--ghost" id="copy-msg" type="button">Kopieer hele boodskap</button>
+      <a class="btn btn--whatsapp" id="send-wa" target="_blank" rel="noopener">Stuur op WhatsApp</a>
+    </div>
+    <p class="copied" id="copied"></p>
+  </div>
+</div>
+
+<script src="config.js"></script>
+<script>
+(function () {
+  const C = window.WEDDING;
+  Object.entries(C.theme).forEach(([k, v]) =>
+    document.documentElement.style.setProperty("--" + k.replace(/([a-z])([A-Z])/g, "$1-$2").toLowerCase(), v));
+
+  const $ = (id) => document.getElementById(id);
+  for (let n = 1; n <= (C.rsvp.maxSeatsPerInvite || 6); n++) {
+    const o = document.createElement("option"); o.value = n; o.textContent = n; $("m-seats").appendChild(o);
+  }
+  $("m-seats").value = 2;
+
+  const couple = `${C.couple.partner1} ${C.couple.joiner} ${C.couple.partner2}`;
+  $("m-msg").value =
+`Dierbare {name} 🌹
+
+${C.words.intro}
+
+${couple} — ${C.dateText}
+
+Ons het met liefde {seatsText} vir {jou} gereserveer. Omdat ons viering klein en intiem is, vra ons vriendelik dat slegs die gaste wat hier genoem word, bywoon.
+
+Sien al die besonderhede en RSVP hier:
+{link}`;
+
+  const base = (C.siteUrl || (location.origin + location.pathname.replace(/invite\.html$/, ""))).replace(/\/?$/, "/");
+  let finalMsg = "", link = "";
+
+  $("maker").addEventListener("submit", (e) => {
+    e.preventDefault();
+    const name = $("m-name").value.trim(); if (!name) return;
+    const seats = parseInt($("m-seats").value, 10);
+    link = `${base}?to=${encodeURIComponent(name)}&seats=${seats}`;
+    finalMsg = $("m-msg").value
+      .replaceAll("{name}", name)
+      .replaceAll("{seatsText}", seats === 1 ? "een plek" : `${seats} plekke`)
+      .replaceAll("{jou}", seats === 1 ? "jou" : "julle")
+      .replaceAll("{link}", link);
+    $("m-link").textContent = link;
+    let phone = $("m-phone").value.replace(/\D/g, "");
+    if (phone.startsWith("0")) phone = "27" + phone.slice(1);   // SA numbers
+    $("send-wa").href = `https://wa.me/${phone}?text=${encodeURIComponent(finalMsg)}`;
+    $("out").hidden = false; $("copied").textContent = "";
+  });
+
+  const copy = (txt, label) => navigator.clipboard.writeText(txt).then(
+    () => $("copied").textContent = label + " gekopieer ✓",
+    () => $("copied").textContent = "Kon nie kopieer nie — kies die teks en kopieer dit self.");
+  $("copy-link").onclick = () => copy(link, "Skakel");
+  $("copy-msg").onclick = () => copy(finalMsg, "Boodskap");
+})();
+</script>
+</body>
+</html>

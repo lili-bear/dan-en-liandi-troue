@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="af">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- ✦ Title & WhatsApp link preview: edit these by hand (WhatsApp can't read config.js).
+       og:image must be a FULL web address, e.g. https://your-site.netlify.app/images/preview.jpg -->
+  <title>Dan &amp; Liandi · Ons Troue</title>
+  <meta name="description" content="Voordat die geloftes uitgespreek word en die klokke lui, nooi ons julle om die begin van ons ewigheid saam met ons te vier.">
+  <meta property="og:title" content="Dan &amp; Liandi · Ons Troue">
+  <meta property="og:description" content="Jy is genooi! Tik om al die besonderhede te sien en te RSVP.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/placeholder-hero.svg">
+  <meta name="theme-color" content="#0E0B0C">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Pinyon+Script&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🌹%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+
+<!-- ============ SVG ORNAMENT LIBRARY (roses, leaves, cross) ============ -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="rose" viewBox="0 0 100 100">
+      <path d="M50 10C72 9 90 27 89 50C88 73 71 90 49 90C27 90 10 72 11 50C12 28 29 11 50 10Z" style="fill:var(--burgundy)"/>
+      <path d="M22 38C28 20 48 14 62 20C50 22 38 30 34 44Z" style="fill:var(--burgundy-lt)" opacity=".55"/>
+      <path d="M50 20C67 20 79 33 77 50C75 65 63 76 48 74C35 72 25 61 27 47C29 32 39 21 50 20Z" style="fill:var(--burgundy-lt)"/>
+      <path d="M78 52C76 70 60 82 44 80C58 76 70 66 72 50Z" style="fill:var(--burgundy)" opacity=".8"/>
+      <path d="M50 30C62 30 68 42 64 52C60 62 46 64 40 56C34 48 38 38 48 38C56 38 58 48 52 51C48 53 45 49 48 46" fill="none" style="stroke:var(--burgundy)" stroke-width="3.2" stroke-linecap="round"/>
+      <path d="M30 60C36 70 48 74 60 70" fill="none" style="stroke:var(--burgundy)" stroke-width="2.2" stroke-linecap="round" opacity=".8"/>
+      <path d="M34 30C40 26 46 25 52 26" fill="none" style="stroke:var(--burgundy)" stroke-width="2" stroke-linecap="round" opacity=".7"/>
+    </symbol>
+    <symbol id="leaf" viewBox="0 0 100 50">
+      <path d="M2 25C25 2 70 0 98 25C70 50 25 48 2 25Z" style="fill:var(--forest-lt)"/>
+      <path d="M2 25C30 22 65 22 96 25" fill="none" style="stroke:var(--forest)" stroke-width="2.4"/>
+      <path d="M30 24L40 12M50 24L60 10M70 24L78 13M30 26L40 37M50 26L60 39M70 26L78 36" style="stroke:var(--forest)" stroke-width="1.3" fill="none" opacity=".7"/>
+    </symbol>
+    <symbol id="spray" viewBox="0 0 320 320">
+      <path d="M10 310C60 250 90 200 150 170C200 145 250 120 300 40" fill="none" style="stroke:var(--forest)" stroke-width="5" stroke-linecap="round"/>
+      <path d="M60 255C40 220 45 190 60 170M200 140C220 110 250 100 280 105" fill="none" style="stroke:var(--forest)" stroke-width="3.5" stroke-linecap="round"/>
+      <use href="#leaf" x="20" y="215" width="80" height="40" transform="rotate(-50 60 235)"/>
+      <use href="#leaf" x="95" y="190" width="90" height="45" transform="rotate(-20 140 212)"/>
+      <use href="#leaf" x="190" y="135" width="80" height="40" transform="rotate(30 230 155)"/>
+      <use href="#leaf" x="230" y="80" width="70" height="35" transform="rotate(-70 265 97)"/>
+      <use href="#leaf" x="160" y="90" width="70" height="35" transform="rotate(-110 195 107)"/>
+      <use href="#rose" x="110" y="105" width="95" height="95"/>
+      <use href="#rose" x="230" y="20" width="70" height="70"/>
+      <use href="#rose" x="30" y="140" width="62" height="62"/>
+      <circle cx="270" cy="160" r="5" style="fill:var(--silver)"/><circle cx="285" cy="175" r="3.5" style="fill:var(--silver)"/>
+      <circle cx="100" cy="95" r="4" style="fill:var(--silver)"/>
+    </symbol>
+    <symbol id="cross" viewBox="0 0 80 120">
+      <g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M40 6V114M12 38H68"/>
+        <circle cx="40" cy="38" r="13"/>
+        <path d="M40 6c-6 0-8 6-4 9M40 6c6 0 8 6 4 9M12 38c0-6 6-8 9-4M12 38c0 6 6 8 9 4M68 38c0-6-6-8-9-4M68 38c0 6-6 8-9 4M40 114c-7 0-9-7-4-10M40 114c7 0 9-7 4-10"/>
+        <path d="M33 70c-5 4-5 10 0 13M47 70c5 4 5 10 0 13M33 92c-4 3-4 7 0 9M47 92c4 3 4 7 0 9" stroke-width="2"/>
+      </g>
+      <circle cx="40" cy="38" r="4" fill="currentColor"/>
+    </symbol>
+    <symbol id="divider" viewBox="0 0 400 40">
+      <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+        <path d="M10 20H160M240 20H390"/>
+        <path d="M160 20c10-12 22-12 26 0c-4 12-16 12-26 0ZM240 20c-10-12-22-12-26 0c4 12 16 12 26 0Z"/>
+        <path d="M120 20c8-8 16-8 20 0M280 20c-8-8-16-8-20 0"/>
+      </g>
+      <use href="#cross" x="188" y="2" width="24" height="36" style="color:inherit"/>
+    </symbol>
+  </defs>
+</svg>
+
+<!-- ============ OPENING (dark) ============ -->
+<header class="hero" id="top">
+  <div class="hero__bg" data-bg="images.hero"></div>
+  <div class="petals" id="petals" aria-hidden="true"></div>
+  <svg class="spray spray--tl" aria-hidden="true"><use href="#spray"/></svg>
+  <svg class="spray spray--br" aria-hidden="true"><use href="#spray"/></svg>
+
+  <div class="hero__inner">
+    <p class="greeting" id="greeting" hidden></p>
+    <div class="monogram" data-bind="couple.monogram"></div>
+    <svg class="cross-ornament" aria-hidden="true"><use href="#cross"/></svg>
+    <p class="intro" data-bind="words.intro"></p>
+    <h1 class="names">
+      <span data-bind="couple.partner1"></span>
+      <span class="joiner" data-bind="couple.joiner"></span>
+      <span data-bind="couple.partner2"></span>
+    </h1>
+    <p class="hero__date" data-bind="dateText"></p>
+    <p class="hero__place" data-bind="venue.town"></p>
+
+    <div class="countdown" id="countdown" data-show="countdown">
+      <div><span id="cd-days">0</span><small>dae</small></div>
+      <div><span id="cd-hours">0</span><small>ure</small></div>
+      <div><span id="cd-mins">0</span><small>minute</small></div>
+      <div><span id="cd-secs">0</span><small>sekondes</small></div>
+    </div>
+
+    <a class="btn btn--silver" href="#rsvp">RSVP</a>
+  </div>
+  <a class="scroll-hint" href="#scripture" aria-label="Rol af">⌄</a>
+</header>
+
+<nav class="nav" id="nav">
+  <a href="#details">Besonderhede</a>
+  <a href="#story" data-show="story">Ons storie</a>
+  <a href="#venue" data-show="map">Venue</a>
+  <a href="#registry" data-show="registry">Geskenklys</a>
+  <a href="#rsvp">RSVP</a>
+</nav>
+
+<main>
+
+<!-- ============ SCRIPTURE (ivory lace) ============ -->
+<section class="section section--ivory scripture" id="scripture">
+  <svg class="divider" aria-hidden="true"><use href="#divider"/></svg>
+  <blockquote>
+    <p>“<span data-bind="words.scripture"></span>”</p>
+    <cite>— <span data-bind="words.scriptureRef"></span></cite>
+  </blockquote>
+  <p class="faith-line" data-bind="words.faithLine"></p>
+</section>
+
+<!-- ============ OUR STORY (ivory) ============ -->
+<section class="section section--ivory lace-bottom story" id="story" data-show="story">
+  <div class="story__grid">
+    <figure class="frame frame--arch">
+      <img data-src="images.couple" alt="Die bruidspaar" loading="lazy">
+    </figure>
+    <div>
+      <h2 class="heading">Ons Storie</h2>
+      <div id="story-text" class="story__text"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DETAILS (dark) ============ -->
+<section class="section section--dark details" id="details">
+  <h2 class="heading heading--light">Die Besonderhede</h2>
+  <svg class="divider divider--silver" aria-hidden="true"><use href="#divider"/></svg>
+  <div class="cards">
+    <article class="card">
+      <h3>Wanneer</h3>
+      <p data-bind="dateText"></p>
+      <p class="muted" data-bind="timeText"></p>
+    </article>
+    <article class="card">
+      <h3>Venue</h3>
+      <p data-bind="venue.name"></p>
+      <p class="muted" data-bind="venue.address"></p>
+    </article>
+    <article class="card">
+      <h3>Dress Code</h3>
+      <p data-bind="dressCode.title"></p>
+      <p class="muted" data-bind="dressCode.text"></p>
+      <div class="swatches" id="swatches"></div>
+    </article>
+    <article class="card">
+      <h3>RSVP</h3>
+      <p data-bind="rsvp.deadlineText"></p>
+      <p class="muted">Antwoord asseblief met die knoppie onderaan die bladsy — dit maak WhatsApp vir jou oop.</p>
+    </article>
+  </div>
+</section>
+
+<!-- ============ VENUE & MAP (ivory) ============ -->
+<section class="section section--ivory lace-top lace-bottom venue" id="venue" data-show="map">
+  <h2 class="heading">Hoe om by ons te kom</h2>
+  <p class="venue__name" data-bind="venue.name"></p>
+  <p class="muted" data-bind="venue.address"></p>
+  <div class="map frame">
+    <iframe id="map-frame" title="Kaart na die venue" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+  <div class="btn-row">
+    <a class="btn" id="maps-btn" target="_blank" rel="noopener">Maak oop in Google Maps</a>
+    <a class="btn btn--ghost" id="waze-btn" target="_blank" rel="noopener" hidden>Maak oop in Waze</a>
+  </div>
+  <p class="note" data-bind="venue.directionsNote"></p>
+</section>
+
+<!-- ============ GALLERY (dark) ============ -->
+<section class="section section--dark gallery" id="gallery" data-show="gallery">
+  <h2 class="heading heading--light">Oomblikke</h2>
+  <svg class="divider divider--silver" aria-hidden="true"><use href="#divider"/></svg>
+  <div class="gallery__grid" id="gallery-grid"></div>
+</section>
+
+<!-- ============ REGISTRY (ivory) ============ -->
+<section class="section section--ivory lace-top registry" id="registry" data-show="registry">
+  <svg class="rose-mini" aria-hidden="true"><use href="#rose"/></svg>
+  <h2 class="heading">Geskenklys</h2>
+  <p class="narrow" data-bind="registry.text"></p>
+  <a class="btn" id="registry-btn" target="_blank" rel="noopener" data-bind="registry.buttonText"></a>
+</section>
+
+<!-- ============ GOOD TO KNOW (ivory) ============ -->
+<section class="section section--ivory lace-bottom faq" id="faq" data-show="faq">
+  <h2 class="heading">Goed om te weet</h2>
+  <div class="faq__list" id="faq-list"></div>
+</section>
+
+<!-- ============ RSVP (dark) ============ -->
+<section class="section section--dark rsvp" id="rsvp">
+  <svg class="spray spray--rsvp" aria-hidden="true"><use href="#spray"/></svg>
+  <h2 class="heading heading--light">Laat ons weet</h2>
+  <p class="muted" data-bind="rsvp.deadlineText"></p>
+  <p class="seats-note" id="seats-note"></p>
+
+  <form class="rsvp__form" id="rsvp-form" novalidate>
+    <label class="field">
+      <span>Jou naam &amp; van</span>
+      <input id="rsvp-name" type="text" autocomplete="name" placeholder="bv. Anri van der Merwe" required>
+    </label>
+
+    <fieldset class="choice">
+      <legend id="attend-legend">Sal jy by ons wees?</legend>
+      <label><input type="radio" name="attend" value="yes"><span>Ja, met vreugde</span></label>
+      <label><input type="radio" name="attend" value="no"><span>Ongelukkig nie</span></label>
+    </fieldset>
+
+    <label class="field" id="seats-field" hidden>
+      <span>Hoeveel van julle kom?</span>
+      <select id="rsvp-seats"></select>
+    </label>
+
+    <label class="field" id="dietary-field" hidden>
+      <span>Enige dieetvereistes? <em>(opsioneel)</em></span>
+      <input id="rsvp-dietary" type="text" placeholder="bv. vegetaries, neutallergie">
+    </label>
+
+    <p class="form-error" id="rsvp-error" role="alert"></p>
+    <button class="btn btn--whatsapp" type="submit">
+      <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7a2.8 2.8 0 0 0 1.8-1.3 2.3 2.3 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3Z"/></svg>
+      Stuur my antwoord op WhatsApp
+    </button>
+    <p class="tiny">Dit maak WhatsApp oop met jou antwoord reeds uitgeskryf — tik net op stuur.</p>
+  </form>
+</section>
+
+</main>
+
+<footer class="footer">
+  <svg class="cross-ornament cross-ornament--sm" aria-hidden="true"><use href="#cross"/></svg>
+  <p class="footer__names"><span data-bind="couple.partner1"></span> <span data-bind="couple.joiner"></span> <span data-bind="couple.partner2"></span></p>
+  <p data-bind="dateText"></p>
+  <p class="muted" data-bind="words.footer"></p>
+</footer>
+
+<script src="config.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
