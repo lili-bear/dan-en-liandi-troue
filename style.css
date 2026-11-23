@@ -154,9 +154,9 @@ a { color: inherit; }
   content: ""; position: absolute; inset: 0;
   background:
     radial-gradient(ellipse at center,
-    rgb(14 11 12 / .30) 20%, /* .x is the intensity, x% is the position.*/
-    rgb(14 11 12 / .75) 70%),
-    linear-gradient(to bottom, transparent 75%, var(--black)); /* x% is where the img starts fading to black.*/
+    rgb(14 11 12 / .60) 0%,    /* centre darkness (behind your names) */ /* .x is the intensity, x% is the position.*/
+    rgb(14 11 12 / .85) 75%),  /* edge darkness */
+    linear-gradient(to bottom, transparent 60%, var(--black)); /* fade into black at the bottom */ /* x% is where the img starts fading to black.*/
 }
 /*.hero__inner { text-shadow: 0 1px 14px rgba(14,11,12,.75); }*/
 .hero__inner { position: relative; z-index: 2; max-width: 720px; animation: rise 1.6s ease both; }
