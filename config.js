@@ -106,7 +106,7 @@ window.WEDDING = {
     hero:   "images/hero-picture.jpg",    // big photo at the very top (dark overlay is added)
     couple: "images/couple-picture.jpg",  // photo next to "Our story"
     gallery: [
-      "images/gallery-1.jpg",
+      "gallery-1.jpg",
       "images/gallery-2.jpg",
       "images/gallery-3.jpg",
       "images/gallery-4.jpg",
