@@ -103,15 +103,15 @@ window.WEDDING = {
   // Put your photos in the "images" folder, then type the file names here.
   // Tip: resize photos to about 1600px wide so the site loads fast on phones.
   images: {
-    hero:   "/hero-picture.jpg",    // big photo at the very top (dark overlay is added)
-    couple: "/couple-picture.jpg",  // photo next to "Our story"
+    hero:   "hero-picture.jpg",    // big photo at the very top (dark overlay is added)
+    couple: "couple-picture.jpg",  // photo next to "Our story"
     gallery: [
-      "/gallery-1.jpg",
-      "/gallery-2.jpg",
-      "/gallery-3.jpg",
-      "/gallery-4.jpg",
-      "/gallery-5.jpg",
-      "/gallery-6.jpg",
+      "gallery-1.jpg",
+      "gallery-2.jpg",
+      "gallery-3.jpg",
+      "gallery-4.jpg",
+      "gallery-5.jpg",
+      "gallery-6.jpg",
     ],
   },
 
