@@ -317,6 +317,21 @@ a { color: inherit; }
 .footer p { margin: 4px 0; }
 .footer__names { font-family: var(--font-script); font-size: 42px; color: var(--ivory); }
 
+/* ---------- footer cross: back to top ---------- */
+.to-top {
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 6px;          /* bigger tap area for fingers */
+  transition: transform .3s;
+}
+.to-top .cross-ornament { transition: color .3s, filter .3s; }
+.to-top:hover { transform: translateY(-4px); }
+.to-top:hover .cross-ornament {
+  color: var(--ivory);
+  filter: drop-shadow(0 0 12px rgba(227,227,232,.7));
+}
+
 /* ---------- animations ---------- */
 @keyframes rise { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
 @keyframes bob { 50% { transform: translate(-50%, 6px); } }
