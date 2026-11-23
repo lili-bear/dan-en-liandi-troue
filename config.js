@@ -37,9 +37,9 @@ window.WEDDING = {
   /* ---------- DRESS CODE ---------- */
   dressCode: {
     title: "Semi-formeel",   // TODO: e.g. "Gotiese formeel"
-    text:  "Vermy asseblief swart en enige helder of patel kleure. Ons sal bly wees as jy iets aan die donker kant dra, bv.:",
+    text:  "Vermy asseblief swart en enige pastel of helder kleure, tensy dit rooi is. Ons sal bly wees as jy iets aan die donker kant dra, bv.:",
     // Colour swatches shown under the dress code. Remove a line to hide it.
-    swatches: ["#106A6E", "#802250" , "#172B66", "#7A1829", "#214A34"], // Dark Teal, Plum, Navy, Burgundy, Forest Green
+    swatches: ["#7B0323", "#673147" , "#000080", "#800020", "#175E17"], // Wine Red, Plum, Navy, Burgundy, Forest Green
   },
 
   /* ---------- RSVP ---------- */
