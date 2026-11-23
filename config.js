@@ -122,7 +122,7 @@ window.WEDDING = {
     map:       true,
     gallery:   true,
     registry:  true,
-    faq:       true,
+    faq:       false,
     roses:     true,   // floating rose petals in the opening
   },
 
@@ -141,7 +141,7 @@ window.WEDDING = {
     silverLt:   "#E3E3E8",   // shiny highlights
     textDark:   "#231A1C",   // text on ivory
     textLight:  "#EFE8DA",   // text on black
-    imageOverlay: "0.15",   // dark overlay on photos: 0 = none, 0.3 = moody, 0.5 = very dark
+    imageOverlay: "0.3",   // dark overlay on photos: 0 = none, 0.3 = moody, 0.5 = very dark
 
     fontGothic: "'UnifrakturMaguntia', serif",          // monogram
     fontDisplay: "'Cinzel', serif",                     // headings
