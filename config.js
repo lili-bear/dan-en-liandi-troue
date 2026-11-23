@@ -20,26 +20,26 @@ window.WEDDING = {
   // Format: "YYYY-MM-DDTHH:MM:00+02:00"  (+02:00 = South African time)
   date: "2027-03-21T10:30:00+02:00",
   dateText: "Sondag, 21 Maart 2027",
-  timeText: "Gaste sit teen 10:00 · Die seremonie begin om 10:30",
+  timeText: "Die seremonie begin om 10:30",
 
   /* ---------- VENUE ---------- */
   venue: {
-    name:    "The Venue Name",                 // TODO
-    address: "123 Garden Road, Stellenbosch, 7600", // TODO (also used for the map)
-    town:    "Stellenbosch",                   // TODO (short version for the opening)
+    name:    "Koinonia Place",
+    address: "7 Westerdale Rd, Durbanville, Cape Town, 7551",
+    town:    "Durbanville",
     // Optional: paste a Google Maps share link. If left empty, the address above is used.
-    mapsLink: "",
+    mapsLink: "https://maps.app.goo.gl/xgWxfAxjdD3GSAfw5",
     // Optional: paste a Waze link. Leave "" to hide the Waze button.
     wazeLink: "",
-    directionsNote: "Daar is parkering op die terrein. Die seremonie vind buite op die grasperk plaas — volg asseblief die paadjie met kerslig vanaf die parkeerarea.", // TODO
+    directionsNote: "Daar is parkering op die terrein. Lorem Ipsum.", // TODO
   },
 
   /* ---------- DRESS CODE ---------- */
   dressCode: {
-    title: "Word binnekort aangekondig",   // TODO: e.g. "Gotiese formeel"
-    text:  "Ons besluit nog oor die fyner besonderhede — kyk binnekort weer hier. Ons kleure is ivoor, swart, silwer, wynrooi en woudgroen.",
+    title: "Semi-formeel",   // TODO: e.g. "Gotiese formeel"
+    text:  "Vermy asseblief swart en enige helder of patel kleure. Ons sal bly wees as jy iets aan die donker kant dra, bv.:",
     // Colour swatches shown under the dress code. Remove a line to hide it.
-    swatches: ["#F4EEE1", "#0E0B0C", "#B9BAC0", "#6B1424", "#1F3A2B"],
+    swatches: ["#106A6E", "#802250" , "#172B66", "#7A1829", "#214A34"], // Dark Teal, Plum, Navy, Burgundy, Forest Green
   },
 
   /* ---------- RSVP ---------- */
@@ -47,7 +47,7 @@ window.WEDDING = {
     deadlineText: "RSVP asseblief voor 1 Februarie 2027",   // TODO
     // Your WhatsApp number in international format, digits only (no +, no spaces, no leading 0).
     // Example: 082 123 4567  ->  27821234567
-    whatsappNumber: "27769542188",     // ← RSVPs are sent here
+    whatsappNumber: "27797536192",     // ← RSVPs are sent here
     askDietary: true,                  // show the dietary needs box
     maxSeatsPerInvite: 3,              // safety cap for personal links
     // Seats when someone opens the plain link (without a personal ?to=... link)
@@ -67,7 +67,7 @@ window.WEDDING = {
   registry: {
     url:  "https://www.easyregistry.co.za/Registry/Gifts/danandliandi",
     buttonText: "Bekyk ons geskenklys",
-    text: "Julle teenwoordigheid is die grootste geskenk. As julle ons verder wil seën, het ons 'n klein geskenklys om ons te help om ons eerste huis saam te bou.",
+    text: "Julle teenwoordigheid is die grootste geskenk! As julle ons verder wil seën, het ons 'n klein geskenklys om ons te help om ons eerste huis saam te bou.",
   },
 
   /* ---------- FAITH & WORDS ---------- */
@@ -150,5 +150,5 @@ window.WEDDING = {
 
   /* Your live website address (fill in after publishing on Netlify).
      Used by the invite link maker. Leave "" to detect it automatically. */
-  siteUrl: "https://stupendous-meringue-aee24f.netlify.app/",
+  siteUrl: "https://lili-bear.github.io/dan-en-liandi-troue/",
 };
